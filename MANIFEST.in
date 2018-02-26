@@ -1,0 +1,4 @@
+include *.md
+include hera_analysis/VERSION
+include hera_analysis/GIT_INFO
+recursive-include hera_analysis/data *
