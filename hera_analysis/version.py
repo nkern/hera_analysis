@@ -19,7 +19,7 @@ def construct_version_info():
                                               '--abbrev-ref', 'HEAD'],
                                              stderr=subprocess.STDOUT).strip()
         git_version = subprocess.check_output(['git', '-C', hera_analysis_dir, 'describe',
-                                               '--tags', '--abbrev=0']).strip()
+                                               '--tags', '--abbrev=0', '--always']).strip()
     except:  # pragma: no cover  - can't figure out how to test exception.
         try:
             # Check if a GIT_INFO file was created when installing package
