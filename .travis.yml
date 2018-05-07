@@ -37,3 +37,5 @@ script: nosetests hera_analysis --with-coverage --cover-package=hera_analysis
 
 after_success:
   - coveralls
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./scripts/travis_pr_pipe.sh; fi'
+
